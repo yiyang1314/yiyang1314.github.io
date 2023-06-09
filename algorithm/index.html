@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>工业相机图像处理 | 易陽羽博客平台</title>
+    <title>halcon视觉学习 | 易陽羽博客平台</title>
     <meta name="description" content="易陽羽博客平台">
     <link rel="icon" href="/images/test.jpg">
   <link rel="manifest" href="/images/test.jpg">
@@ -12,789 +12,523 @@
   <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
   <meta http-quiv="expires" cotent="0">
     
-    <link rel="preload" href="/assets/css/0.styles.c9120bc4.css" as="style"><link rel="preload" href="/assets/js/app.4da30dd0.js" as="script"><link rel="preload" href="/assets/js/13.86f17a9a.js" as="script"><link rel="prefetch" href="/assets/js/10.cfc7b205.js"><link rel="prefetch" href="/assets/js/11.cb8ae4bc.js"><link rel="prefetch" href="/assets/js/12.ab3ecb05.js"><link rel="prefetch" href="/assets/js/14.ded0f1b1.js"><link rel="prefetch" href="/assets/js/15.86569fc0.js"><link rel="prefetch" href="/assets/js/16.38bf9bf2.js"><link rel="prefetch" href="/assets/js/2.33d9b4c1.js"><link rel="prefetch" href="/assets/js/3.b0ae39a2.js"><link rel="prefetch" href="/assets/js/4.a57a78a9.js"><link rel="prefetch" href="/assets/js/5.11d7f905.js"><link rel="prefetch" href="/assets/js/6.adf1cbb1.js"><link rel="prefetch" href="/assets/js/7.1581cf2f.js"><link rel="prefetch" href="/assets/js/8.3ca4c508.js"><link rel="prefetch" href="/assets/js/9.93f8b21b.js">
+    <link rel="preload" href="/assets/css/0.styles.c9120bc4.css" as="style"><link rel="preload" href="/assets/js/app.da5745cb.js" as="script"><link rel="preload" href="/assets/js/15.8dd8bc33.js" as="script"><link rel="prefetch" href="/assets/js/10.d4e96276.js"><link rel="prefetch" href="/assets/js/11.8282ca15.js"><link rel="prefetch" href="/assets/js/12.3612665a.js"><link rel="prefetch" href="/assets/js/13.d2fae164.js"><link rel="prefetch" href="/assets/js/14.75952df8.js"><link rel="prefetch" href="/assets/js/16.fd832847.js"><link rel="prefetch" href="/assets/js/17.1c516349.js"><link rel="prefetch" href="/assets/js/18.92e53276.js"><link rel="prefetch" href="/assets/js/19.19c4743c.js"><link rel="prefetch" href="/assets/js/2.33d9b4c1.js"><link rel="prefetch" href="/assets/js/20.fa172edb.js"><link rel="prefetch" href="/assets/js/21.d5219ad1.js"><link rel="prefetch" href="/assets/js/22.653df740.js"><link rel="prefetch" href="/assets/js/23.85eda409.js"><link rel="prefetch" href="/assets/js/3.aed0c78a.js"><link rel="prefetch" href="/assets/js/4.dd99c4a2.js"><link rel="prefetch" href="/assets/js/5.85f0d872.js"><link rel="prefetch" href="/assets/js/6.e73572a1.js"><link rel="prefetch" href="/assets/js/7.b79adf72.js"><link rel="prefetch" href="/assets/js/8.bb2e147d.js"><link rel="prefetch" href="/assets/js/9.7d7233f4.js">
     <link rel="stylesheet" href="/assets/css/0.styles.c9120bc4.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">易陽羽博客平台</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/accumulate/" class="nav-link">JAVA知识</a></div><div class="nav-item"><a href="/others/" class="nav-link">前端开发</a></div><div class="nav-item"><a href="/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Dotnet软件开发</a></div><div class="nav-item"><a href="/others/" class="nav-link">机器视觉开发</a></div><div class="nav-item"><a href="/others/" class="nav-link">上位机开发</a></div><div class="nav-item"><a href="https://www.cnblogs.com/yiyangyu/" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  易陽羽
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/accumulate/" class="nav-link">JAVA知识</a></div><div class="nav-item"><a href="/others/" class="nav-link">前端开发</a></div><div class="nav-item"><a href="/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Dotnet软件开发</a></div><div class="nav-item"><a href="/others/" class="nav-link">机器视觉开发</a></div><div class="nav-item"><a href="/others/" class="nav-link">上位机开发</a></div><div class="nav-item"><a href="https://www.cnblogs.com/yiyangyu/" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  易陽羽
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>工业相机图像处理</span> <!----></p> <ul class="sidebar-group-items"></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="工业相机图像处理"><a href="#工业相机图像处理" class="header-anchor">#</a> 工业相机图像处理</h1> <h3 id="_1-c-实现图像深度转换，并且保存常见的图像格式"><a href="#_1-c-实现图像深度转换，并且保存常见的图像格式" class="header-anchor">#</a> 1.C++实现图像深度转换，并且保存常见的图像格式</h3> <blockquote><p>用C++开发一份24位的RGB彩色图像buffer转化为8位图像,并且保存图像文件为tiff，bmp,png,raw格式，水平垂直分辨率为96；</p></blockquote> <p>以下是C++代码实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-#include &lt;vector&gt;
-#include &lt;cmath&gt;
-#include &lt;tiffio.h&gt;
-#include &lt;png.h&gt;
-#include &lt;opencv2/opencv.hpp&gt;
-
-using namespace std;
-
-void saveTIFF(string filename, vector&lt;unsigned char&gt;&amp; data, int width, int height)
-{
-    TIFF* tiff = TIFFOpen(filename.c_str(), &quot;w&quot;);
-
-    TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);
-    TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);
-    TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, 8);
-    TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);
-    TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_RGB);
-    TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, 3);
-    TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, height);
-    TIFFSetField(tiff, TIFFTAG_XRESOLUTION, 96.0);
-    TIFFSetField(tiff, TIFFTAG_YRESOLUTION, 96.0);
-    TIFFSetField(tiff, TIFFTAG_RESOLUTIONUNIT, RESUNIT_INCH);
-
-    for (int row = 0; row &lt; height; ++row) {
-        unsigned char* row_data = &amp;data[3 * width * row];
-        if (TIFFWriteScanline(tiff, row_data, row, 0) &lt; 0) {
-            cerr &lt;&lt; &quot;Error writing TIFF file: &quot; &lt;&lt; filename &lt;&lt; endl;
-            break;
-        }
-    }
-
-    TIFFClose(tiff);
-}
-
-void saveBMP(string filename, vector&lt;unsigned char&gt;&amp; data, int width, int height)
-{
-    cv::Mat image(height, width, CV_8UC3, &amp;data[0]);
-
-    cv::imwrite(filename, image);
-}
-
-void savePNG(string filename, vector&lt;unsigned char&gt;&amp; data, int width, int height)
-{
-    FILE* file = fopen(filename.c_str(), &quot;wb&quot;);
-
-    png_structp png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
-    if (!png_ptr) {
-        cerr &lt;&lt; &quot;Error creating PNG write struct&quot; &lt;&lt; endl;
-        return;
-    }
-
-    png_infop info_ptr = png_create_info_struct(png_ptr);
-    if (!info_ptr) {
-        png_destroy_write_struct(&amp;png_ptr, (png_infopp)NULL);
-        cerr &lt;&lt; &quot;Error creating PNG info struct&quot; &lt;&lt; endl;
-        return;
-    }
-
-    png_init_io(png_ptr, file);
-
-    png_set_IHDR(png_ptr, info_ptr, width, height, 8, PNG_COLOR_TYPE_RGB, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
-    png_set_pHYs(png_ptr, info_ptr, 96 * PNG_RESOLUTION_METER, 96 * PNG_RESOLUTION_METER, PNG_RESOLUTION_METER_UNIT_TYPE);
-
-    png_write_info(png_ptr, info_ptr);
-
-    vector&lt;png_bytep&gt; rows(height);
-    for (int row = 0; row &lt; height; ++row) {
-        rows[row] = &amp;data[3 * width * row];
-    }
-
-    png_write_image(png_ptr, &amp;rows[0]);
-
-    png_write_end(png_ptr, NULL);
-
-    png_destroy_write_struct(&amp;png_ptr, &amp;info_ptr);
-
-    fclose(file);
-}
-
-void saveRAW(string filename, vector&lt;unsigned char&gt;&amp; data, int width, int height)
-{
-    ofstream file(filename.c_str(), ios::out | ios::binary);
-    file.write((char*)&amp;data[0], data.size());
-    file.close();
-}
-
-
-void convertTo8Bit(vector&lt;unsigned char&gt;&amp; rgb_data, vector&lt;unsigned char&gt;&amp; output_data, int width, int height)
-{
-    output_data.resize(width * height);
-
-    for (int i = 0; i &lt; width * height; ++i) {
-        int r = rgb_data[3 * i];
-        int g = rgb_data[3 * i + 1];
-        int b = rgb_data[3 * i + 2];
-
-        int gray = int(0.299 * r + 0.587 * g + 0.114 * b + 0.5);
-
-        output_data[i] = (gray &gt; 255) ? 255 : gray;
-    }
-}
-
-int main()
-{
-    string input_filename = &quot;test.rgb&quot;;
-    string output_filename_prefix = &quot;test&quot;;
-
-    ifstream file(input_filename.c_str(), ios::in | ios::binary);
-
-    int width = 640;
-    int height = 480;
-
-    vector&lt;unsigned char&gt; rgb_data(width * height * 3);
-    vector&lt;unsigned char&gt; output_data;
-
-    file.read((char*)&amp;rgb_data[0], rgb_data.size());
-
-    convertTo8Bit(rgb_data, output_data, width, height);
-
-    saveTIFF(output_filename_prefix + &quot;.tif&quot;, rgb_data, width, height);
-    saveBMP(output_filename_prefix + &quot;.bmp&quot;, rgb_data, width, height);
-    savePNG(output_filename_prefix + &quot;.png&quot;, rgb_data, width, height);
-    saveRAW(output_filename_prefix + &quot;.raw&quot;, rgb_data, width, height);
-
-    cout &lt;&lt; &quot;Images saved successfully&quot; &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br></div></div><p>上述代码包含了4个函数，分别用于保存tiff、bmp、png和raw格式的图像文件。其中，tiff和png文件需要使用相关库进行编译，具体为libtiff和libpng。另外，代码中使用了OpenCV库，用于将RGB数据转换成Mat格式，然后保存成bmp文件。</p> <p>主函数中，先读取24位RGB彩色图像数据，然后调用<code>convertTo8Bit</code>函数将其转换成8位灰度图像数据。最后分别调用保存函数将图像数据保存成不同格式的文件。其中，水平垂直分辨率都为96。</p> <p>需要注意的是，上述代码中只是做了简单的灰度值计算，如果需要更加精确的转换可以考虑使用其他的算法，如Luma通道计算。</p> <h3 id="_2-c-实现图像深度转换，并且保存常见的图像格式"><a href="#_2-c-实现图像深度转换，并且保存常见的图像格式" class="header-anchor">#</a> 2.C#实现图像深度转换，并且保存常见的图像格式</h3> <blockquote><p>C#开发一份24位的RGB彩色图像buffer转化为8位图像，并且保存图像文件为tiff，bmp,png,raw格式，水平垂直分辨率为480；</p></blockquote> <p>以下是C#代码实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>csharpCopy Codeusing System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-
-namespace ImageConverter
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string inputFilename = &quot;test.rgb&quot;;
-            string outputFilenamePrefix = &quot;test&quot;;
-
-            int width = 640;
-            int height = 480;
-
-            byte[] rgbData = File.ReadAllBytes(inputFilename);
-            byte[] outputData;
-
-            ConvertTo8Bit(rgbData, out outputData, width, height);
-
-            SaveTIFF(outputFilenamePrefix + &quot;.tif&quot;, outputData, width, height);
-            SaveBMP(outputFilenamePrefix + &quot;.bmp&quot;, outputData, width, height);
-            SavePNG(outputFilenamePrefix + &quot;.png&quot;, outputData, width, height);
-            SaveRAW(outputFilenamePrefix + &quot;.raw&quot;, outputData);
-
-            Console.WriteLine(&quot;Images saved successfully&quot;);
-        }
-
-        static void ConvertTo8Bit(byte[] rgbData, out byte[] outputData, int width, int height)
-        {
-            outputData = new byte[width * height];
-
-            for (int i = 0; i &lt; width * height; ++i)
-            {
-                int r = rgbData[3 * i];
-                int g = rgbData[3 * i + 1];
-                int b = rgbData[3 * i + 2];
-
-                int gray = (int)(0.299 * r + 0.587 * g + 0.114 * b + 0.5);
-
-                outputData[i] = (byte)(gray &gt; 255 ? 255 : gray);
-            }
-        }
-
-        static void SaveTIFF(string filename, byte[] data, int width, int height)
-        {
-            using (var bitmap = new Bitmap(width, height, PixelFormat.Format8bppIndexed))
-            {
-                ColorPalette grayscalePalette = bitmap.Palette;
-                for (int i = 0; i &lt; 256; ++i)
-                {
-                    grayscalePalette.Entries[i] = Color.FromArgb(i, i, i);
-                }
-                bitmap.Palette = grayscalePalette;
-
-                Rectangle rect = new Rectangle(0, 0, width, height);
-                BitmapData bitmapData = bitmap.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format8bppIndexed);
-
-                IntPtr ptr = bitmapData.Scan0;
-                int bytes = bitmapData.Stride * height;
-                byte[] rgbValues = new byte[bytes];
-
-                // Copy the data into RGB format.
-                for (int row = 0; row &lt; height; ++row)
-                {
-                    int srcOffs = row * width;
-                    int dstOffs = row * bitmapData.Stride;
-                    for (int col = 0; col &lt; width; ++col)
-                    {
-                        rgbValues[dstOffs++] = data[srcOffs++];
-                    }
-                }
-
-                System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, ptr, bytes);
-
-                bitmap.UnlockBits(bitmapData);
-
-                bitmap.SetResolution(480, 480);
-                bitmap.Save(filename, ImageFormat.Tiff);
-            }
-        }
-
-        static void SaveBMP(string filename, byte[] data, int width, int height)
-        {
-            using (var bitmap = new Bitmap(width, height, PixelFormat.Format8bppIndexed))
-            {
-                ColorPalette grayscalePalette = bitmap.Palette;
-                for (int i = 0; i &lt; 256; ++i)
-                {
-                    grayscalePalette.Entries[i] = Color.FromArgb(i, i, i);
-                }
-                bitmap.Palette = grayscalePalette;
-
-                Rectangle rect = new Rectangle(0, 0, width, height);
-                BitmapData bitmapData = bitmap.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format8bppIndexed);
-
-                IntPtr ptr = bitmapData.Scan0;
-                int bytes = bitmapData.Stride * height;
-                byte[] rgbValues = new byte[bytes];
-
-                // Copy the data into RGB format.
-                for (int row = 0; row &lt; height; ++row)
-                {
-                    int srcOffs = row * width;
-                    int dstOffs = row * bitmapData.Stride;
-                    for (int col = 0; col &lt; width; ++col)
-                    {
-                        rgbValues[dstOffs++] = data[srcOffs++];
-                    }
-                }
-
-                System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, ptr, bytes);
-
-                bitmap.UnlockBits(bitmapData);
-
-                bitmap.SetResolution(480, 480);
-                bitmap.Save(filename, ImageFormat.Bmp);
-            }
-        }
-
-        static void SavePNG(string filename, byte[] data, int width, int height)
-        {
-            using (var bitmap = new Bitmap(width, height, PixelFormat.Format8bppIndexed))
-            {
-                ColorPalette grayscalePalette = bitmap.Palette;
-                for (int i = 0; i &lt; 256; ++i)
-                {
-                    grayscalePalette.Entries[i] = Color.FromArgb(i, i, i);
-                }
-                bitmap.Palette = grayscalePalette;
-
-                Rectangle rect = new Rectangle(0, 0, width, height);
-                BitmapData bitmapData = bitmap.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format8bppIndexed);
-
-                IntPtr ptr = bitmapData.Scan0;
-                int bytes = bitmapData.Stride * height;
-                byte[] rgbValues = new byte[bytes];
-
-                // Copy the data into RGB format.
-                for (int row = 0; row &lt; height; ++row)
-                {
-                    int srcOffs = row * width;
-                    int dstOffs = row * bitmapData.Stride;
-                    for (int col = 0; col &lt; width; ++col)
-                    {
-                        rgbValues[dstOffs++] = data[srcOffs++];
-                    }
-                }
-
-                System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, ptr, bytes);
-
-                bitmap.UnlockBits(bitmapData);
-
-                bitmap.SetResolution(480, 480);
-                bitmap.Save(filename, ImageFormat.Png);
-            }
-        }
-
-        static void SaveRAW(string filename, byte[] data)
-        {
-            File.WriteAllBytes(filename, data);
-        }
-    }
-}
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br></div></div><p>上述代码包含了4个函数，分别用于保存tiff、bmp、png和raw格式的图像文件。其中，tiff、bmp和png文件均需要使用System.Drawing命名空间下的相关类进行编写。</p> <p>主函数中，先读取24位RGB彩色图像数据，然后调用<code>ConvertTo8Bit</code>函数将其转换成8位灰度图像数据。最后分别调用保存函数将图像数据保存成不同格式的文件。其中，水平垂直分辨率都为480。</p> <p>需要注意的是，上述代码中只是做了简单的灰度值计算，如果需要更加精确的转换可以考虑使用其他的算法，如Luma通道计算。而在保存tiff、bmp和png文件时，还需要设置对应的256级灰度调色板。</p> <h3 id="_3-用c-实现黑白相机，彩色相机的图像深度转换和存储"><a href="#_3-用c-实现黑白相机，彩色相机的图像深度转换和存储" class="header-anchor">#</a> 3.用C++实现黑白相机，彩色相机的图像深度转换和存储</h3> <blockquote><p>C++ 把MONO12,Mono8,RGB16,RGB8 ,Mono10Packed,Mono12Packed的图像buffer 分别转化位8位，16位，24位的图像，并且保存为水平垂直分辨率为300的tiff,bmp,png,jpg,raw文件格式。</p></blockquote> <p>以下是C++代码实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-
-using namespace std;
-
-// MONO10Packed和Mono12Packed的像素数据需要解包
-void UnpackPixels(const unsigned char* src, unsigned char* dst, const int pixelCount, const int bitsPerPixel) {
-    for (int i = 0; i &lt; pixelCount; ++i) {
-        if (bitsPerPixel == 10) {
-            dst[2 * i]     = src[5 * i] &lt;&lt; 2 | src[5 * i + 1] &gt;&gt; 6;
-            dst[2 * i + 1] = (src[5 * i + 1] &amp; 0x3F) &lt;&lt; 2 | src[5 * i + 2] &gt;&gt; 6;
-        } else if (bitsPerPixel == 12) {
-            dst[2 * i]     = src[6 * i] &lt;&lt; 4 | src[6 * i + 1] &gt;&gt; 4;
-            dst[2 * i + 1] = (src[6 * i + 1] &amp; 0x0F) &lt;&lt; 8 | src[6 * i + 2];
-        }
-    }
-}
-
-// 将单通道图像转换为8位或16位图像
-void ConvertTo8or16Bit(const unsigned char* src, unsigned char* dst, const int pixelCount, const int bitsPerPixel) {
-    if (bitsPerPixel == 8) {
-        for (int i = 0; i &lt; pixelCount; ++i) {
-            dst[i] = src[i];
-        }
-    } else if (bitsPerPixel == 16) {
-        for (int i = 0; i &lt; pixelCount; ++i) {
-            dst[2 * i] = src[i] &amp; 0xFF;
-            dst[2 * i + 1] = src[i] &gt;&gt; 8;
-        }
-    }
-}
-
-// 将RGB图像转换为24位图像
-void ConvertTo24Bit(const unsigned char* src, unsigned char* dst, const int pixelCount) {
-    for (int i = 0; i &lt; pixelCount; ++i) {
-        dst[3 * i] = src[3 * i + 2];
-        dst[3 * i + 1] = src[3 * i + 1];
-        dst[3 * i + 2] = src[3 * i];
-    }
-}
-
-// 保存为tiff格式
-void SaveAsTiff(const string&amp; filename, const unsigned char* data, const int width, const int height, const int bitsPerPixel) {
-    TIFF* tiff = TIFFOpen(filename.c_str(), &quot;w&quot;);
-
-    TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);
-    TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);
-    TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, 1);
-    TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, bitsPerPixel);
-    TIFFSetField(tiff, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
-    TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_MINISBLACK);
-    TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_LZW);
-    TIFFSetField(tiff, TIFFTAG_XRESOLUTION, 300.0);
-    TIFFSetField(tiff, TIFFTAG_YRESOLUTION, 300.0);
-    TIFFSetField(tiff, TIFFTAG_RESOLUTIONUNIT, RESUNIT_INCH);
-
-    TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, TIFFDefaultStripSize(tiff, 0));
-    TIFFSetField(tiff, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);
-
-    const int bufferSize = width * height * bitsPerPixel / 8;
-    TIFFWriteEncodedStrip(tiff, 0, (void*)data, bufferSize);
-
-    TIFFClose(tiff);
-}
-
-// 保存为bmp格式
-void SaveAsBmp(const string&amp; filename, const unsigned char* data, const int width, const int height, const int bitsPerPixel) {
-    BITMAPFILEHEADER bmpFileHeader;
-    bmpFileHeader.bfType = 0x4D42;
-    bmpFileHeader.bfSize = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + width * height * bitsPerPixel / 8;
-    bmpFileHeader.bfReserved1 = 0;
-    bmpFileHeader.bfReserved2 = 0;
-    bmpFileHeader.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER);
-
-    BITMAPINFOHEADER bmpInfoHeader;
-    bmpInfoHeader.biSize = sizeof(BITMAPINFOHEADER);
-    bmpInfoHeader.biWidth = width;
-    bmpInfoHeader.biHeight = -height; // negative height to indicate top-down DIB
-    bmpInfoHeader.biPlanes = 1;
-    bmpInfoHeader.biBitCount = bitsPerPixel;
-    bmpInfoHeader.biCompression = BI_RGB;
-    bmpInfoHeader.biSizeImage = 0;
-    bmpInfoHeader.biXPelsPerMeter = 300.0 / 0.0254;
-    bmpInfoHeader.biYPelsPerMeter = 300.0 / 0.0254;
-    bmpInfoHeader.biClrUsed = 0;
-    bmpInfoHeader.biClrImportant = 0;
-
-    ofstream ofs(filename, ios::binary);
-    ofs.write(reinterpret_cast&lt;char*&gt;(&amp;bmpFileHeader), sizeof(BITMAPFILEHEADER));
-    ofs.write(reinterpret_cast&lt;char*&gt;(&amp;bmpInfoHeader), sizeof(BITMAPINFOHEADER));
-    ofs.write(reinterpret_cast&lt;const char*&gt;(data), width * height * bitsPerPixel / 8);
-    ofs.close();
-}
-
-// 保存为png格式
-void SaveAsPng(const string&amp; filename, const unsigned char* data, const int width, const int height, const int bitsPerPixel) {
-    LodePNGColorType colorType;
-    if (bitsPerPixel == 8) {
-        colorType = LCT_GREY;
-    } else if (bitsPerPixel == 16) {
-        colorType = LCT_GREY_ALPHA;
-    } else if (bitsPerPixel == 24) {
-        colorType = LCT_RGB;
-    }
-
-    unsigned error = lodepng::encode(filename, data, width, height, colorType, 8);
-    if (error) {
-        cerr &lt;&lt; &quot;PNG encoding error: &quot; &lt;&lt; lodepng_error_text(error) &lt;&lt; endl;
-    }
-}
-
-// 保存为jpeg格式
-void SaveAsJpeg(const string&amp; filename, const unsigned char* data, const int width, const int height, const int bitsPerPixel) {
-    struct jpeg_compress_struct cinfo;
-    struct jpeg_error_mgr jerr;
-
-    FILE* outfile;
-    if ((outfile = fopen(filename.c_str(), &quot;wb&quot;)) == NULL) {
-        cerr &lt;&lt; &quot;Cannot open JPEG file&quot; &lt;&lt; endl;
-        return;
-    }
-
-    cinfo.err = jpeg_std_error(&amp;jerr);
-    jpeg_create_compress(&amp;cinfo);
-    jpeg_stdio_dest(&amp;cinfo, outfile);
-
-    cinfo.image_width = width;
-    cinfo.image_height = height;
-    if (bitsPerPixel == 8) {
-        cinfo.input_components = 1;
-        cinfo.in_color_space = JCS_GRAYSCALE;
-    } else if (bitsPerPixel == 24) {
-        cinfo.input_components = 3;
-        cinfo.in_color_space = JCS_RGB;
-    }
-    jpeg_set_defaults(&amp;cinfo);
-    jpeg_set_quality(&amp;cinfo, 90, true);
-    jpeg_start_compress(&amp;cinfo, true);
-
-    JSAMPROW row_pointer[1];
-    int row_stride;
-    if (bitsPerPixel == 8) {
-        row_stride = width;
-    } else if (bitsPerPixel == 24) {
-        row_stride = 3 * width;
-    }
-    while (cinfo.next_scanline &lt; cinfo.image_height) {
-        row_pointer[0] = const_cast&lt;JSAMPROW&gt;(&amp;data[cinfo.next_scanline * row_stride]);
-        jpeg_write_scanlines(&amp;cinfo, row_pointer, 1);
-    }
-
-    jpeg_finish_compress(&amp;cinfo);
-    fclose(outfile);
-}
-
-// 保存为raw格式
-void SaveAsRaw(const string&amp; filename, const unsigned char* data, const int width, const int height, const int bitsPerPixel) {
-    ofstream ofs(filename, ios::binary);
-    ofs.write(reinterpret_cast&lt;const char*&gt;(data), width * height * bitsPerPixel / 8);
-    ofs.close();
-}
-
-int main() {
-    const string inputFilename = &quot;test.rgb&quot;;
-    const string outputFilenamePrefix = &quot;test&quot;;
-
-    const int width = 640;
-    const int height = 480;
-
-    const int pixelCount = width * height;
-
-    // 读取图像数据
-    ifstream ifs(inputFilename, ios::binary);
-    unsigned char* rawData = new unsigned char[3 * pixelCount];
-    ifs.read(reinterpret_cast&lt;char*&gt;(rawData), 3 * pixelCount);
-    ifs.close();
-
-    // 分配内存并转换图像格式
-    unsigned char* outputData8 = new unsigned char[pixelCount];
-    unsigned char* outputData16 = new unsigned char[2 * pixelCount];
-    unsigned char* outputData24 = new unsigned char[3 * pixelCount];
-
-    unsigned char* unpackedData = new unsigned char[pixelCount];
-    UnpackPixels(rawData, unpackedData, pixelCount, 10); // 对于Mono10Packed图像需要解包
-    ConvertTo8or16Bit(unpackedData, outputData8, pixelCount, 8);
-    ConvertTo8or16Bit(unpackedData, outputData16, pixelCount, 16);
-
-    UnpackPixels(rawData, unpackedData, pixelCount, 12); // 对于Mono12Packed图像需要解包
-    ConvertTo8or16Bit(unpackedData, outputData8, pixelCount, 8);
-    ConvertTo8or16Bit(unpackedData, outputData16, pixelCount, 16);
-
-    ConvertTo8or16Bit(rawData, outputData8, pixelCount, 8);
-    ConvertTo8or16Bit(rawData, outputData16, pixelCount, 16);
-
-    ConvertTo24Bit(rawData, outputData24, pixelCount);
-
-    // 保存为不同格式的图像文件
-    SaveAsTiff(outputFilenamePrefix + &quot;_8bit.tif&quot;, outputData8, width, height, 8);
-    SaveAsBmp(outputFilenamePrefix + &quot;_8bit.bmp&quot;, outputData8, width, height, 8);
-    SaveAsPng(outputFilenamePrefix + &quot;_8bit.png&quot;, outputData8, width, height, 8);
-    SaveAsJpeg(outputFilenamePrefix + &quot;_8bit.jpg&quot;, outputData8, width, height, 8);
-    SaveAsRaw(outputFilenamePrefix + &quot;_8bit.raw&quot;, outputData8, width, height, 8);
-
-    SaveAsTiff(outputFilenamePrefix + &quot;_16bit.tif&quot;, outputData16, width, height, 16);
-    SaveAsBmp(outputFilenamePrefix + &quot;_16bit.bmp&quot;, outputData16, width, height, 16);
-    SaveAsPng(outputFilenamePrefix + &quot;_16bit.png&quot;, outputData16, width, height, 16);
-    SaveAsJpeg(outputFilenamePrefix + &quot;_16bit.jpg&quot;, outputData16, width, height, 16);
-    SaveAsRaw(outputFilenamePrefix + &quot;_16bit.raw&quot;, outputData16, width, height, 16);
-    }
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br></div></div><h3 id="_4-工业相机图像格式的数据存储原理"><a href="#_4-工业相机图像格式的数据存储原理" class="header-anchor">#</a> 4. 工业相机图像格式的数据存储原理</h3> <p>MONO12图像buffer存储结构和原理、Mono8图像buffer存储结构和原理、RGB16图像buffer存储结构和原理、RGB8图像buffer存储结构和原理</p> <p>以下是各种图像buffer存储结构和原理的整理：</p> <ul><li>MONO8（单通道8位）：每个像素点只有一个通道，通道值的范围是0-255，使用一个字节存储。</li> <li>MONO10Packed（单通道10位压缩）：每个像素点只有一个通道，通道值的范围是0-1023，使用2个字节存储。其中，每三个像素点的数据会被压缩为4个字节，即将30位的像素数据压缩为24位进行存储。</li> <li>MONO12（单通道12位）：每个像素点只有一个通道，通道值的范围是0-4095，使用2个字节存储。</li> <li>MONO12Packed（单通道12位压缩）：每个像素点只有一个通道，通道值的范围是0-4095，使用3个字节存储。其中，每两个像素点的数据会被压缩为3个字节，即将24位的像素数据压缩为18位进行存储。</li> <li>RGB8（三通道8位）：每个像素点有三个通道，分别是红、绿、蓝三个通道，每个通道的像素值范围是0-255，总共使用三个字节存储。</li> <li>RGB16（三通道16位）：每个像素点有三个通道，分别是红、绿、蓝三个通道，每个通道的像素值范围是0-65535，总共使用六个字节存储。</li></ul> <p>以上是各种图像buffer的存储结构和原理的整理。需要特别说明的是，MONO10Packed和MONO12Packed采用了压缩算法进行存储，可以在一定程度上减少存储空间的占用。此外，RGB8和RGB16是三通道的图像格式，分别对应红、绿、蓝三个颜色通道，每个通道的像素值都可以在0-255或0-65535之间变化。</p> <h3 id="_5-24位图像处理"><a href="#_5-24位图像处理" class="header-anchor">#</a> 5. 24位图像处理</h3> <blockquote><p>用C# 把24位的彩色相机buffer分别转化为8位，16位，24位的buffer，并且分别保存图像为tiff,jpg,png,raw,bmp文件，水平垂直分辨率为96</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-
-public static class ColorCameraBufferConverter
-{
-    public static void ConvertTo8Bit(byte[] inputBuffer, byte[] outputBuffer)
-    {
-        for (int i = 0; i &lt; inputBuffer.Length; i += 3)
-        {
-            byte r = inputBuffer[i];
-            byte g = inputBuffer[i + 1];
-            byte b = inputBuffer[i + 2];
-
-            byte gray = (byte)(0.299 * r + 0.587 * g + 0.114 * b);
-
-            outputBuffer[i / 3] = gray;
-        }
-    }
-
-    public static void ConvertTo16Bit(byte[] inputBuffer, byte[] outputBuffer)
-    {
-        for (int i = 0; i &lt; inputBuffer.Length; i += 3)
-        {
-            byte r = inputBuffer[i];
-            byte g = inputBuffer[i + 1];
-            byte b = inputBuffer[i + 2];
-
-            ushort red16 = (ushort)(r &lt;&lt; 8);
-            ushort green16 = (ushort)(g &lt;&lt; 8);
-            ushort blue16 = (ushort)(b &lt;&lt; 8);
-
-            outputBuffer[i * 2] = (byte)red16;
-            outputBuffer[i * 2 + 1] = (byte)(red16 &gt;&gt; 8);
-            outputBuffer[i * 2 + 2] = (byte)green16;
-            outputBuffer[i * 2 + 3] = (byte)(green16 &gt;&gt; 8);
-            outputBuffer[i * 2 + 4] = (byte)blue16;
-            outputBuffer[i * 2 + 5] = (byte)(blue16 &gt;&gt; 8);
-        }
-    }
-
-    public static void ConvertTo24Bit(byte[] inputBuffer, byte[] outputBuffer)
-    {
-        Array.Copy(inputBuffer, outputBuffer, inputBuffer.Length);
-    }
-
-    public static void SaveToTiff(byte[] buffer, int width, int height, string fileName, long compression = EncoderValue.CompressionLZW)
-    {
-        using (Bitmap bitmap = new Bitmap(width, height, PixelFormat.Format24bppRgb))
-        {
-            BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, bitmap.PixelFormat);
-
-            try
-            {
-                int stride = bitmapData.Stride; // 行字节宽度
-
-                for (int y = 0; y &lt; height; y++)
-                {
-                    byte[] lineBuffer = new byte[stride];
-
-                    Array.Copy(buffer, y * stride, lineBuffer, 0, stride);
-
-                    for (int x = 0; x &lt; width; x++)
-                    {
-                        // RGB顺序
-                        int index1 = x * 3;
-                        int index2 = y * stride + x * 3;
-                        lineBuffer[index1] = buffer[index2 + 2];
-                        lineBuffer[index1 + 1] = buffer[index2 + 1];
-                        lineBuffer[index1 + 2] = buffer[index2];
-                    }
-
-                    System.Runtime.InteropServices.Marshal.Copy(lineBuffer, 0, (IntPtr)(bitmapData.Scan0 + y * stride), stride);
-                }
-
-                SaveTiff(bitmap, fileName, compression);
-            }
-            finally
-            {
-                bitmap.UnlockBits(bitmapData);
-            }
-        }
-    }
-
-    public static void SaveToJpeg(byte[] buffer, int width, int height, string fileName, int quality = 80)
-    {
-        using (Bitmap bitmap = new Bitmap(width, height, PixelFormat.Format24bppRgb))
-        {
-            BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, bitmap.PixelFormat);
-
-            try
-            {
-                int stride = bitmapData.Stride; // 行字节宽度
-
-                for (int y = 0; y &lt; height; y++)
-                {
-                    byte[] lineBuffer = new byte[stride];
-
-                    Array.Copy(buffer, y * stride, lineBuffer, 0, stride);
-
-                    for (int x = 0; x &lt; width; x++)
-                    {
-                        // RGB顺序
-                        int index1 = x * 3;
-                        int index2 = y * stride + x * 3;
-                        lineBuffer[index1] = buffer[index2 + 2];
-                        lineBuffer[index1 + 1] = buffer[index2 + 1];
-                        lineBuffer[index1 + 2] = buffer[index2];
-                    }
-
-                    System.Runtime.InteropServices.Marshal.Copy(lineBuffer, 0, (IntPtr)(bitmapData.Scan0 + y * stride), stride);
-                }
-
-                SaveJpeg(bitmap, fileName, quality);
-            }
-            finally
-            {
-                bitmap.UnlockBits(bitmapData);
-            }
-        }
-    }
-
-    public static void SaveToPng(byte[] buffer, int width, int height, string fileName)
-    {
-        using (Bitmap bitmap = new Bitmap(width, height, PixelFormat.Format24bppRgb))
-        {
-            BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, bitmap.PixelFormat);
-
-            try
-            {
-                int stride = bitmapData.Stride; // 行字节宽度
-
-                for (int y = 0; y &lt; height; y++)
-                {
-                    byte[] lineBuffer = new byte[stride];
-
-                    Array.Copy(buffer, y * stride, lineBuffer, 0, stride);
-
-                    for (int x = 0; x &lt; width; x++)
-                    {
-                        // RGB顺序
-                        int index1 = x * 3;
-                        int index2 = y * stride + x * 3;
-                        lineBuffer[index1] = buffer[index2 + 2];
-                        lineBuffer[index1 + 1] = buffer[index2 + 1];
-                        lineBuffer[index1 + 2] = buffer[index2];
-                    }
-
-                    System.Runtime.InteropServices.Marshal.Copy(lineBuffer, 0, (IntPtr)(bitmapData.Scan0 + y * stride), stride);
-                }
-
-                bitmap.Save(fileName, ImageFormat.Png);
-            }
-            finally
-            {
-                bitmap.UnlockBits(bitmapData);
-            }
-        }
-    }
-
-    public static void SaveToRaw(byte[] buffer, string fileName)
-    {
-        System.IO.File.WriteAllBytes(fileName, buffer);
-    }
-
-    public static void SaveToBmp(byte[] buffer, int width, int height, string fileName)
-    {
-        using (Bitmap bitmap = new Bitmap(width, height, PixelFormat.Format24bppRgb))
-        {
-            BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, bitmap.PixelFormat);
-
-            try
-            {
-                int stride = bitmapData.Stride; // 行字节宽度
-
-                for (int y = 0; y &lt; height; y++)
-                {
-                    byte[] lineBuffer = new byte[stride];
-
-                    Array.Copy(buffer, y * stride, lineBuffer, 0, stride);
-
-                    for (int x = 0; x &lt; width; x++)
-                    {
-                        // RGB顺序
-                        int index1 = x * 3;
-                        int index2 = y * stride + x * 3;
-                        lineBuffer[index1] = buffer[index2 + 2];
-                        lineBuffer[index1 + 1] = buffer[index2 + 1];
-                        lineBuffer[index1 + 2] = buffer[index2];
-                    }
-
-                    System.Runtime.InteropServices.Marshal.Copy(lineBuffer, 0, (IntPtr)(bitmapData.Scan0 + y * stride), stride);
-                }
-
-                bitmap.Save(fileName, ImageFormat.Bmp);
-            }
-            finally
-            {
-                bitmap.UnlockBits(bitmapData);
-            }
-        }
-    }
-
-    private static void SaveTiff(Bitmap bitmap, string fileName, long compression)
-    {
-        EncoderParameters encoderParameters = new EncoderParameters(1);
-        encoderParameters.Param[0] = new EncoderParameter(Encoder.Compression, compression);
-
-        ImageCodecInfo myImageCodecInfo = GetEncoderInfo(&quot;image/tiff&quot;);
-
-        bitmap.Save(fileName, myImageCodecInfo, encoderParameters);
-    }
-
-    private static void SaveJpeg(Bitmap bitmap, string fileName, int quality)
-    {
-        EncoderParameters encoderParameters = new EncoderParameters(1);
-        encoderParameters.Param[0] = new EncoderParameter(Encoder.Quality, quality);
-
-        ImageCodecInfo myImageCodecInfo = GetEncoderInfo(&quot;image/jpeg&quot;);
-
-        bitmap.Save(fileName, myImageCodecInfo, encoderParameters);
-    }
-
-    private static ImageCodecInfo GetEncoderInfo(string mimeType)
-    {
-        ImageCodecInfo[] encoders = ImageCodecInfo.GetImageEncoders();
-
-        for (int i = 0; i &lt; encoders.Length; i++)
-        {
-            if (encoders[i].MimeType == mimeType)
-            {
-                return encoders[i];
-            }
-        }
-
-        return null;
-    }
-}
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br></div></div><p>调用示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>csharpCopy Code// 假设width和height已知并且是24位彩色图像的大小
-byte[] inputBuffer = ... // 24位彩色图像buffer
-
-byte[] outputBuffer1 = new byte[width * height];
-byte[] outputBuffer2 = new byte[width * height * 2];
-byte[] outputBuffer3 = new byte[width * height * 3];
-
-ColorCameraBufferConverter.ConvertTo8Bit(inputBuffer, outputBuffer1);
-ColorCameraBufferConverter.ConvertTo16Bit(inputBuffer, outputBuffer2);
-ColorCameraBufferConverter.ConvertTo24Bit(inputBuffer, outputBuffer3);
-
-string tiffFileName = &quot;output.tiff&quot;;
-string jpegFileName = &quot;output.jpg&quot;;
-string pngFileName = &quot;output.png&quot;;
-string rawFileName = &quot;output.raw&quot;;
-string bmpFileName = &quot;output.bmp&quot;;
-
-int horizontalResolution = 96;
-int verticalResolution = 96;
-
-ColorCameraBufferConverter.SaveToTiff(outputBuffer1, width, height, tiffFileName);
-ColorCameraBufferConverter.SaveToJpeg(outputBuffer1, width, height, jpegFileName);
-ColorCameraBufferConverter.SaveToPng(outputBuffer1, width, height, pngFileName);
-ColorCameraBufferConverter.SaveToRaw(outputBuffer1, rawFileName);
-ColorCameraBufferConverter.SaveToBmp(outputBuffer1, width, height, bmpFileName);
-
-// 保存时指定水平垂直分辨率
-SaveToTiff(outputBuffer1, width, height, tiffFileName, horizontalResolution, verticalResolution);
-SaveToJpeg(outputBuffer1, width, height, jpegFileName, horizontalResolution, verticalResolution);
-SaveToPng(outputBuffer1, width, height, pngFileName, horizontalResolution, verticalResolution);
-</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>来源链接：[<a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank" rel="noopener noreferrer">1<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>] [<a href="https://www.zhihu.com/question/26553263" target="_blank" rel="noopener noreferrer">2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>] [<a href="https://zhuanlan.zhihu.com/p/72581663" target="_blank" rel="noopener noreferrer">3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>] [<a href="https://en.wikipedia.org/wiki/8-bit_computing" target="_blank" rel="noopener noreferrer">4<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>]</p> <p>-<a href="https://www.cnblogs.com/ybqjymy/p/13672531.html" target="_blank" rel="noopener noreferrer">LIBTIFF库的使用心得 - 一杯清酒邀明月 - 博客园 (cnblogs.com)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
-    <script src="/assets/js/app.4da30dd0.js" defer></script><script src="/assets/js/13.86f17a9a.js" defer></script>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">易陽羽博客平台</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/others/" class="nav-link">前端开发</a></div><div class="nav-item"><a href="/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Dotnet软件开发</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">JAVA知识体系</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.wdbyte.com/java-notes/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站内文章导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.pdai.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java 全栈知识体系
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jeeweixin.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JeeWeiXin
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://javaguide.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaGuide(Java面试 + 学习指南)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  廖雪峰的官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://springcloud.fun/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud 中文索引
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.fangzhipeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  方志朋的专栏
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://how2j.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  HOW2J
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tobebetterjavaer.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java程序员进阶之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/itwanger/JavaBooks#c-1" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java程序员必读书单
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.justauth.cn/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JustAuth
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.easy-es.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Easy-Es
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://dubbo.apache.org/zh-cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Apache Dubbo
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">机器视觉开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.opencv.org.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  OpenCV官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.bookstack.cn/read/opencv-doc-zh-4.0/README.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  OpenCV 中文文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.51halcon.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  51HALCON
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Cplus开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://shouce.jb51.net/qt-beginning/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt 快速入门系列教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.qtcn.org/bbs/i.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  QTCN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://c.biancheng.net/view/3851.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt教程，Qt5编程入门教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.qter.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt开源社区
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">AI-导航工具箱</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://toolsdar.com/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.naviai.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI 导航站 | 收录了国内外2000+优质AI工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.deepdhai.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  深度AI导航 | 国内外AI工具导航大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AIGC导航|AI工具导航|AI人工智能导航|找AI工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn/favorites/aiwebnav" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI工具导航大全 - AI工具集汇集
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://justdoai.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 | 500+ AI工具导航大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://hao.uisdc.com/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 - 优设AI导航 - 专业AIGC网站导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tabxx.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 | TabXX 钛波斯
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://letsview.cn/ai-tools" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  幕连AI导航 - AI人工智能导航网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn/favorites/chinese-toolsnav" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI中文工具导航 - 实用智能工具 | AI工具集 | 360AI商店|AIGC导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.ainav.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AINav.net - 一个属于AI人的导航网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aizj.cc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI之家 | AI工具导航_专业AI人工智能网站导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://feizhuke.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ai导航-飞猪ai导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.ai-collection.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI集合网 - 人工智能领域资源集合网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.8kmm.com/type/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI - 八千网址导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://b.jimmylv.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Powered by ChatGPT AI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.h1z1tmc.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航猫
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">ChatGPT服务</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://ai.yscxy.net/#/chat/1002" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  cxy-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://chat.newstop.asia/#/chat" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  newstop-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kkk.mygpt.bid/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  3K-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.0.bnu120.space/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  120云服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chatgpt.0voice.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  voice-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kjshsh.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ai Dog服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.aibeke.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ABK-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.haiyangyuan.com.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  HYY-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.haiyangyuan.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  EgBot-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gptkok.com/zh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gptkok-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.scorpii.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Zchat-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.bo-e.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博弈AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.6ix.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  SixAI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.julianwl.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chat Bot服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.yiios.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  小鱼智能服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://noisevip.cn/chat/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  自定义GPT KEY
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.usesless.com/chat/1002" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  小莓用AI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://www.cnblogs.com/yiyangyu/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的博客中心
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/others/" class="nav-link">前端开发</a></div><div class="nav-item"><a href="/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Dotnet软件开发</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">JAVA知识体系</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.wdbyte.com/java-notes/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站内文章导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.pdai.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java 全栈知识体系
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://jeeweixin.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JeeWeiXin
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://javaguide.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JavaGuide(Java面试 + 学习指南)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  廖雪峰的官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://springcloud.fun/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud 中文索引
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.fangzhipeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  方志朋的专栏
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://how2j.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  HOW2J
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tobebetterjavaer.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java程序员进阶之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/itwanger/JavaBooks#c-1" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java程序员必读书单
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.justauth.cn/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JustAuth
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.easy-es.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Easy-Es
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://dubbo.apache.org/zh-cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Apache Dubbo
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">机器视觉开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.opencv.org.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  OpenCV官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.bookstack.cn/read/opencv-doc-zh-4.0/README.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  OpenCV 中文文档
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.51halcon.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  51HALCON
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Cplus开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://shouce.jb51.net/qt-beginning/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt 快速入门系列教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.qtcn.org/bbs/i.php" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  QTCN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://c.biancheng.net/view/3851.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt教程，Qt5编程入门教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.qter.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Qt开源社区
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">AI-导航工具箱</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://toolsdar.com/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.naviai.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI 导航站 | 收录了国内外2000+优质AI工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.deepdhai.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  深度AI导航 | 国内外AI工具导航大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AIGC导航|AI工具导航|AI人工智能导航|找AI工具
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn/favorites/aiwebnav" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI工具导航大全 - AI工具集汇集
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://justdoai.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 | 500+ AI工具导航大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://hao.uisdc.com/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 - 优设AI导航 - 专业AIGC网站导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tabxx.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航 | TabXX 钛波斯
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://letsview.cn/ai-tools" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  幕连AI导航 - AI人工智能导航网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aigc.cn/favorites/chinese-toolsnav" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI中文工具导航 - 实用智能工具 | AI工具集 | 360AI商店|AIGC导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.ainav.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AINav.net - 一个属于AI人的导航网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.aizj.cc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI之家 | AI工具导航_专业AI人工智能网站导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://feizhuke.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ai导航-飞猪ai导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.ai-collection.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI集合网 - 人工智能领域资源集合网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.8kmm.com/type/ai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI - 八千网址导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://b.jimmylv.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Powered by ChatGPT AI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.h1z1tmc.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  AI导航猫
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">ChatGPT服务</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://ai.yscxy.net/#/chat/1002" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  cxy-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://chat.newstop.asia/#/chat" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  newstop-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kkk.mygpt.bid/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  3K-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.0.bnu120.space/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  120云服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chatgpt.0voice.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  voice-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kjshsh.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ai Dog服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.aibeke.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ABK-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.haiyangyuan.com.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  HYY-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.haiyangyuan.com.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  EgBot-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gptkok.com/zh" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gptkok-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.scorpii.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Zchat-AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.bo-e.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博弈AI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.6ix.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  SixAI服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://chat.julianwl.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chat Bot服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.yiios.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  小鱼智能服务
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://noisevip.cn/chat/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  自定义GPT KEY
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://ai.usesless.com/chat/1002" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  小莓用AI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://www.cnblogs.com/yiyangyu/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的博客中心
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>halcon视觉学习</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/algorithm/#_1-1-halcon软件界面" class="sidebar-link">1.1 halcon软件界面</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/algorithm/#_1-1-1-halcon常用快捷键" class="sidebar-link">1.1.1 halcon常用快捷键</a></li><li class="sidebar-sub-header"><a href="/algorithm/#_1-1-2-基本函数" class="sidebar-link">1.1.2  基本函数</a></li></ul></li><li><a href="/algorithm/#_2-1-窗口显示" class="sidebar-link">2.1 窗口显示</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/algorithm/#_2-2-窗口显示" class="sidebar-link">2.2 窗口显示</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/algorithm/#_2-3-常用算子" class="sidebar-link">2.3 常用算子</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/algorithm/#_2-4-数学几何算子" class="sidebar-link">2.4 数学几何算子</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/algorithm/#_2-5-正则运算" class="sidebar-link">2.5 正则运算</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="halcon视觉学习"><a href="#halcon视觉学习" class="header-anchor">#</a> halcon视觉学习</h1> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>  邮箱：yiyangyu1314@outlook.com
+  
+  作者：易陽羽
+  
+  时间：2023-06-08
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_1-1-halcon软件界面"><a href="#_1-1-halcon软件界面" class="header-anchor">#</a> 1.1 halcon软件界面</h2> <p>halcon的功能模式有点像markdown编辑器，利用窗口操作来转化成你要编的程序，这样可以减低开发成本，halcon是
+面向开发期短的工作岗位和机器视觉。</p> <p>可以看这篇：基本操作索引</p> <p>软件界面主要分为以下窗口
+1.图形窗口：图像可视化
+2.算子窗口：算子手动修改，操作化
+3.变量窗口：方便查询变量
+4.程序窗口：编写代码</p> <h3 id="_1-1-1-halcon常用快捷键"><a href="#_1-1-1-halcon常用快捷键" class="header-anchor">#</a> 1.1.1 halcon常用快捷键</h3> <p>ctrl+E 打开浏览例程
+ctrl+F 查找
+F1 查看帮助
+F2 重置程序
+F3 取消注释
+F4 注释
+F5 运行程序
+F6 单步运行程序</p> <p>3.1 图像显示
+算子	功能	单词
+dev_open_window	新建图像窗口	开发
+dis_display	图像显示	
+disp_message	显示字符串	信息
+write_string	在设定的光标位置， write string	
+set_tposition	配合write_string，设置光标位置	
+4.1 图像转换
+算子	功能	单词
+rgb1_to_gray	rgb 转 gray	
+region_to_mean	平均灰度值	
+region_to_bin	转二进制图像（二值图像）	
+region_to_label	转标签图像（其他算子使用？）	标签</p> <h3 id="_1-1-2-基本函数"><a href="#_1-1-2-基本函数" class="header-anchor">#</a> 1.1.2  基本函数</h3> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>*读取一张彩色图像
+read_image (Image,'blister/blister_reference')
+*得到图像通道数
+count_channels(Image,Channels)
+*彩色图像转灰度图
+rgb1_to_gray(Image, GrayImage)
+*彩色图像分离为三个通道图像
+decompose3(Image,R,G,B)
+*RGB转HSV和HSI
+trans_from_rgb(R,G,B,H1,S1,V1,'hsv')
+trans_from_rgb(R,G,B,H2,S2,I2,'hsi')
+*HSV和HIS转RGB
+trans_to_rgb(H1,S1,V1,ImageRed, ImageGreen,ImageBlue, 'hsv')
+trans_to_rgb(H2,S2,I2,ImageRed1,ImageGreen1, ImageBlue1, 'hsi')
+
+*将转换后的单通道RGB合并成RGB彩色图
+compose3(ImageRed,ImageGreen,ImageBlue,ImageRGB)
+*图像均值模糊
+mean_image(GrayImage,ImageMean, 9, 9)
+*图像相加，相减，相减的绝对值，线性拉伸，图像相乘除
+add_image(GrayImage, ImageMean,ImageResult, 0.5, 0)
+sub_image(GrayImage,ImageMean,ImageSub, 1,128)
+abs_diff_image(GrayImage,ImageMean,ImageAbsDiff,1)
+scale_image(ImageAbsDiff, ImageScaled, 5,20)
+mult_image(GrayImage,ImageMean,ImageResult1,0.005, 0)
+div_image(GrayImage,ImageMean,ImageResult2,255, 0)
+
+*指数、gamma变换、图像反转、对数、幂、开方
+exp_image(GrayImage,ExpImage, 'e')
+gamma_image(GrayImage,GammaImage,0.416667,0.055, 0.0031308, 255, 'true')
+invert_image(GrayImage,ImageInvert)
+log_image(GrayImage,LogImage, 'e')
+pow_image(GrayImage,PowImage, 2)
+sqrt_image(GrayImage,SqrtImage)
+pow_image(SqrtImage, PowImage1, 3)
+
+*图像数据格式转换
+convert_image_type(GrayImage,ImageConverted,'real')
+
+*三角函数运算
+sin_image(ImageConverted, SinImage)
+cos_image(ImageConverted,CosImage)
+tan_image(ImageConverted,TanImage)
+asin_image(SinImage,ArcsinImage)
+acos_image(CosImage,ArccosImage)
+atan_image(TanImage,ArctanImage)
+*取两幅图像的最大值或最小值
+max_image(GrayImage,ImageMean,ImageMax)
+min_image(GrayImage,ImageMean,ImageMin)
+*创建一个单位变换矩阵，每次根据创建的平移或、旋转或缩放矩阵对图像进行平移、旋转、缩放操作
+hom_mat2d_identity(HomMat2DIdentity)
+*创建平移矩阵
+hom_mat2d_translate(HomMat2DIdentity,20,50,HomMat2DTranslate)
+*图像平移
+affine_trans_image(GrayImage,ImageAffineTrans,HomMat2DTranslate, 'constant', 'false')
+get_image_size(GrayImage,Width, Height)
+*创建旋转矩阵
+hom_mat2d_rotate(HomMat2DIdentity,rad(45),Width/2,Height/2, HomMat2DRotate)
+
+*图像旋转
+affize_trans_image(GrayImage,ImageAffineTrans1,HomMat2DRotate, 'constant', 'false')
+
+*创建缩放矩阵
+hom_mat2d_scale(HomMat2DIdentity, 2, 1.5,Width/2, Height/2, HomMat2DScale)
+
+*图像缩放
+affine_trans_image(GrayImage,ImageAffineTrans2,HomMat2DScale, 'constant', 'false')
+
+*根据图像得到的region，通过计算中心和方向，利用vector_angle_to_rigid得到变换矩阵，然后进行图像放射变换
+threshold(GrayImage,Region, 128, 255)
+shape_trans(Region, RegionTrans, 'convex')
+orientation_region(RegionTrans, Phi)
+area_center(RegionTrans, Area, Row, Column)
+vector_angle_to_rigid(Row, Column, Phi,Row, Column, 0, HomMat2D)
+affine_trans_image(GrayImage,ImageAffineTrans3,HomMat2D, 'constant', 'false')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br></div></div><h2 id="_2-1-窗口显示"><a href="#_2-1-窗口显示" class="header-anchor">#</a> 2.1 窗口显示</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>dev_update_window ('off')
+dev_update_window ('on')程序执行打开和关闭期间，图像对象是否在图形窗口中显示
+dev_clear_window ()
+dev_close_window ()
+dev_open_window (0, 0, Width, Height, 'black', WindowHandle)后面可以在这个句柄上显示
+
+dev_set_draw ('margin')
+dev_set_color ('white')
+dev_set_colored (12)
+dev_set_line_width (3)
+dev_set_part( : : Row1, Column1, Row2, Column2 : )设置图形窗口中要显示的图像部分。 参数Row1和Column1指定左上角，Row2和Column2指定要显示的图像部分的右下角。
+get_system ('operating_system', OS)
+
+dev_display (Image)
+set_display_font (WindowHandleZoom, 14, 'mono', 'true', 'false')
+disp_continue_message (WindowID, 'black', 'true')
+disp_ellipse (WindowID, Row, Column, Phi, Ra, Rb)
+disp_cross (WindowHandle, RowCenterRegion, ColumnCenterRegion, 15, 0)
+disp_arrow (WindowHandle, RowCenterRegion, ColumnCenterRegion, RowCenterRegion - 60 *sin(OrientationRegion), ColumnCenterRegion + 60 * cos(OrientationRegion), 2)
+write_string(WindowHandle3, '请用鼠标画ROI')窗口写字
+get_mbutton( : : WindowHandle : Row, Column, Button )原地等待直到鼠标按下
+dump_window_image (DumpImage, WindowHandle)将窗口的内容截图成图像
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="_2-2-窗口显示"><a href="#_2-2-窗口显示" class="header-anchor">#</a> 2.2 窗口显示</h2> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>## 图像、区域
+read_image
+write_image 第3个参数FillColor是输入变量，表示不属于图像区域的灰度像素填充值，默认值为0。
+dump_window_image将窗口内其它信息（如箭头，指示文字等）也保存进Image，然后write_image保存；
+parse_filename(ImageFiles, BaseName, Extension, Directory)获取文件名、后缀、文件夹
+get_image_size
+zoom_image_factor(Image : ImageZoomed : ScaleWidth, ScaleHeight, Interpolation : )根据缩放因子实现图像缩放
+zoom_image_size(Image : ImageZoom : Width, Height, Interpolation : )根据尺寸进行图像的缩放
+convert_image_type
+channels_to_image把单通道图像转变为一个多通道图像。
+rgb1_to_gray
+
+scale_image(Image : ImageScaled : Mult, Add : )  图像灰度比例拉伸运算（黑的地方更黑，亮的地方更亮），    g’ := g * Mult + Add
+emphasize (ImageInvert, ImageEmphasize, Width, Height, 1)增强图像的高频区域（边缘和拐角）的对比度， res := round((orig - mean) * Factor) + orig
+illuminate(Image : ImageIlluminate : MaskWidth, MaskHeight, Factor : )增强图像的高频区域（边缘和拐角）的对比度
+
+
+add_image
+max_image
+invert_image
+mean_image
+tile_images(Images : TiledImage : NumColumns, TileOrder : )NumColumns指最终拼成的图有多少列，TileOrder指子图片排列的顺序——垂直方向还是水平方向
+tile_images_offset(Images : TiledImage : OffsetRow, OffsetCol, Row1, Col1, Row2, Col2, Width, Height : )
+gen_image_const (ConstImage, 'byte', 11, 11)创建一个灰度值不变的图像
+edges_image (Image, ImaAmp, ImaDir, 'mderiche2', 0.7, 'nms', 10, 20)使用Deriche、_Lanser、Shen或者_Canny滤波器提取只包含边缘的图像。
+mirror_image (Image, ImageMirror, 'row')图像的镜像
+
+add_channels 为区域添加灰度值
+shape_trans (SelectedRegions, RegionTrans, 'rectangle2')*区域转化为矩形
+compose3 (ImageRed, ImageGreen, ImageBlue, LogoImageTempl)将三幅图像合并成一幅图像
+decompose3 (LogoImage, ImageR, ImageG, ImageB)将一幅图像根据RGB值转换成三幅图像。
+access_channel(MultiChannelImage : Image : Channel : )访问多通道输入图像的某一个通道。 结果是一个单通道图像
+intersection取出两个区域中重叠的部分
+difference取出两个区域中不重叠的部分
+complement(Region : RegionComplement : : )找到输入区域的补区域。
+intensity(Regions,Images:::Mean,Deviation)计算Images中Regions的均值和方差。
+
+get_domain (Image, Domain)图像转换成区域
+reduce_domain获得特定区域Region位置的图像，不裁剪
+move_region
+zoom_region(Region : RegionZoom : ScaleWidth, ScaleHeight : )根据缩放因子对区域缩放
+crop_domain对特定区域图像进行裁剪
+crop_part从每个输入图像中剪切一个或多个矩形区域。 区域由矩形指示，这些矩形由其左上角的坐标及其大小定义。
+connection将区域分散开，只要是没有交集的区域，都分成不同的单独小区域
+select_shape
+select_shape_std
+select_shape_proto (Pads, BallBonds, MissingBonds, 'overlaps_rel', 0, 0)选出具有相似特征的所有区域
+union1返回所有输入区域的并集
+union2返回两个区域的并集
+concat_obj通过concat只是把objects放到一起，没有实质上的合并，依然各过各的，union完之后，object就完全变成了一个了，不再好分开
+skeleton骨架
+count_obj
+boundary边界
+fill_up
+fill_up_shape
+area_center一个区域的面积（大小）和中心
+smallest_circle最小外接圆的中心坐标和半径会被返回
+inner_circle最大内接圆
+gen_circle
+diameter_region最小外接圆直径
+smallest_rectangle2 (RegionTrans, Row, Column, Phi, Length1, Length2)
+gen_rectangle2 (Rectangle, 300, 200, Phi, 100, 1)生成矩形
+
+clip_region_rel (RegionBorder, RegionClipped, 5, 5, 5, 5)剪切的方法按照输入参数顶部剪切的行数，底部剪切的行数，左边剪切的列数，右边剪切的列数。
+clip_region (HighZoomedMoved, HighAreas, 0, 0, 511, 511)剪切region里一个矩形出来，需要填入矩形的左上角点和右下角点，进行剪切
+region_to_bin(Region : BinImage : ForegroundGray, BackgroundGray, Width, Height : )在Region中给定的输入区域转换为“字节”图像，并将ForegroundGray的灰度值分配给该区域中的所有像素。 如果输入区域大于生成的图像，则会在图像边框处裁剪。 背景灰度值设置为BackgroundGray。
+
+## 区域延伸
+expand_gray_ref (Regions, Image, EmptyRegion, RegionExpand, 'maximal', 'image', Mean, 11)根据灰度和颜色将分离的区域连通。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br></div></div><h2 id="_2-3-常用算子"><a href="#_2-3-常用算子" class="header-anchor">#</a> 2.3 常用算子</h2> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>* 图片信息获取
+get_image_size * 获取图像尺寸
+get_image_type * 图像类型 byte,int1,uint2 int2,int4 direction,real
+get_image_time * 获取图像时间
+get_image_pointer1 * 获取单通道的指针，尺寸类型
+compose3 * 把3通道图像合成彩色图像
+decompose3 * 把彩色图像解析成3通道图像
+rgb_to_gray1|3 * 计算一种或三种通道的灰度值
+
+* 颜色通道转换
+tran_from_rgb * 把rgb 格式转化成为HSV|HSI
+tran_to_rgb   * 把HSV|HSI 格式转化成为rgb 
+threshold     * 阈值分割/直方图选取 区域
+threshold_sub_xld     * 亚像素阈值分割/直方图选取轮廓，是以线，点为单位
+binary_threshold     * 自动获取阈值完成分割
+
+
+connection    * 获取区域分组
+select_shape  * 获取特征区域
+select_contous_xld 轮廓选择
+count_obj * 统计轮廓个数
+gen_region_contoours_xml * 把轮廓填充为区域
+fill_up       * 填充特征区域
+reduce_domain * 从原图中扣去特征图相同的区域
+mean_image * 计算均值滤波
+dyn_threshold     * 局部阈值分割 与mean_image 一起使用，选取比均值大或小的区域
+
+* 腐蚀膨胀
+dilation_circle
+dilation_rectangle1
+
+gray_closing (Image, ImageReduced, ImageClosingFast)灰度值闭操作,结构元素在图像中遍历，灰度值最低的值作为新值，有使图像变暗的作用。
+gray_opening (Image, ImageReduced, ImageOpeningFast) 灰度值开操作,结构元素在图像中遍历，灰度值最高的值作为新值，有使图像变亮的作用。
+
+*  修改图像或区域的值
+gen_image_const(Image,'byte',512,512)    //生成一个纯0图像，用byte格式
+gen_image_proto (ImageReduced, ImageCleared, 255) 创建纯白图像
+overpaint_gray ( ImageDestination, ImageSource : : : )  将灰度值不相同区域用不同颜色绘制到ImageDestination中，ImageSource包含希望的灰度值图像
+overpaint_region ( Image, Region : : Grayval, Type : ) 将Region以一个恒定的灰度值绘制到Image图像中
+paint_gray ( ImageSource, ImageDestination : MixedImage : : ) 将ImageSource的图像绘制到ImageDestination中，形成MixedImage。
+paint_region ( Region, Image : ImageResult : Grayval, Type : ) 将Region以一个恒定的灰度值绘制到Image图像中
+paint_xld ( XLD, Image : ImageResult : Grayval : ) 将XLD以一个恒定的灰度值绘制到Image图像中
+    
+get_region_points(RegionUnion, Rows, Columns)查询一个区域的像素坐标
+get_grayval(DupImage2, Rows, Columns, Grayval)获得像素坐标对应像素值
+set_grayval ( Image : : Row, Column, Grayval : ) 设置Image图像中坐标为（Row，Column）的灰度值
+
+* 仿射变换
+两种实现旋转的方法rotate_image和affine_trans_image
+rotate_image是按逆时针方向进行旋转，而且旋转后的图片大小不变，但内容可能会有缺失。并且物体的中心在原图的位置和在旋转之后图片上的位置还会有差异。
+为了解决使用rotate_image进行旋转产生的问题，可以所以建议使用旋转矩阵affine_trans_image来进行旋转。
+
+text_line_slant (Image, Image, 140, -rad(45), rad(45), SlantAngle)自动检索文本行的斜率，第三个参数为字体拉升长度 &gt;=原字符长度
+hom_mat2d_slant (HomMat2DIdentity, -SlantAngle, 'x', 0, 0, HomMat2DSlant)向生成的二维变换的齐次变换矩阵中添加斜率
+orientation_region用来计算区域的方向，将区域拟合为最小椭圆时，该椭圆长轴与水平方向的夹角
+text_line_orientation (Needle, Needle, 35, -0.523599, 0.523599, OrientationAngle)确定文本行或段落的方向。
+vector_angle_to_rigid (Row, Column, Phi, Row, Column, AimPhi, HomMat2D) 获得仿射变换矩阵
+hom_mat2d_identity (HomMat2DIdentity)生成一个2D单位矩阵
+hom_mat2d_translate (HomMat2DIdentity, -0.5*(Row1+Row2), -0.5*(Column1+Column2), HomMat2DTranslate)对矩阵进行变换，用于平移。
+hom_mat2d_rotate (HomMat2DIdentity, -OrientationAngle, Px, Py, HomMat2DRotate)用于旋转
+hom_mat2d_scale (HomMat2DTranslate, ScaleFactor, ScaleFactor, 0, 0, HomMat2DScale) 用于缩放
+affine_trans_image对图像进行仿射变换
+rotate_image (ImageScaleMax, ImageRotate, deg(-OrientationAngle), 'constant')将图像按照指定的角度旋转
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><p><img src="images/image-20230219192443436.png" alt="image-20230219192443436"></p> <p><img src="images/image-20230221223011581.png" alt="image-20230221223011581"></p> <h2 id="_2-4-数学几何算子"><a href="#_2-4-数学几何算子" class="header-anchor">#</a> 2.4 数学几何算子</h2> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>* 求角度
+计算直线与水平轴之间的夹角 angle_lx( : : Row1, Column1, Row2, Column2 : Angle)
+计算两条直线之间的夹角angle_ll( : : RowA1, ColumnA1, RowA2, ColumnA2, RowB1, ColumnB1, RowB2, ColumnB2 : Angle)
+计算一条直线的方向line_orientation( : : RowBegin, ColBegin, RowEnd, ColEnd : Phi)
+计算一条直线的参数line_position( : : RowBegin, ColBegin, RowEnd, ColEnd : RowCenter, ColCenter, Length, Phi)
+计算区域等效椭圆的参数elliptic_axis(Regions : : : Ra, Rb, Phi)
+计算区域的最小仿射外接矩形的参数smallest_rectangle2(Regions : : : Row, Column, Phi, Length1, Length2)
+计算区域的方向orientation_region(Regions : : : Phi)
+
+* 求距离
+distance_pl：只算点到直线的距离。
+distance_pp：计算两点之间的距离。
+projection_pl：计算一个点到直线的垂足。
+angle_ll：计算两条直线的夹角。
+angle_lx：计算直线和x轴的夹角。
+
+1.已知点与直线 求垂足
+点（X,Y）
+线（BeginX，BeginY，EndX，EndY）
+projection_pl (X, Y, BeginX, BeginY, EndX, EndX, 垂足X, 垂足Y)
+
+2.已知一线轮廓与所求平行线之间距离
+已知线轮廓：contour
+已知距离：Distance
+gen_parallel_contour_xld(contour, parallelcontour, ‘regression_normal’, -Distance)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p><img src="images/2f90cbc1e6c04fc99dbb9d7a343bac8d.png" alt="在这里插入图片描述"></p> <h2 id="_2-5-正则运算"><a href="#_2-5-正则运算" class="header-anchor">#</a> 2.5 正则运算</h2> <p><img src="images/5964f8c48b61480b874cdc72d9c985cb.png" alt="img"></p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/accumulate/" class="prev">
+          wpf应用开发
+        </a></span> <span class="next"><a href="/algorithm/2.html">
+          工业相机图像处理2
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.da5745cb.js" defer></script><script src="/assets/js/15.8dd8bc33.js" defer></script>
   </body>
 </html>
